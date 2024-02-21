@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <title>Animal Game</title>
+
+  <body>
+    <h2>Animal Game by Chase</h2>
+
+    <form>
+      <label for="animal">The hidden animal type</label>
+      <input type="password" id="animal" name="animal" value="Chicken" />
+      <br />
+
+      <label for="answer">Guess the animal</label>
+      <input type="text" id="answer" name="answer" autofocus /> <br />
+
+      <input type="button" onclick="checkAnimal()" value="Check the guess" />
+    </form>
+
+    <p id="result">This text will be replaced</p>
+
+    <script>
+      wrong = 0;
+      correct = 0;
+      function checkAnimal() {
+        console.log("Getting form values");
+        animal = document.getElementById("animal").value;
+        guess = document.getElementById("answer").value;
+        if (guess == animal) {
+          alert("Ruff ruff");
+          correct += 1;
+        } else {
+          alert("Grrr");
+          wrong += 1;
+        }
+
+        out = document.getElementById("result");
+        out.innerHTML = "Correct: " + correct + "</br>Wrong: " + wrong;
+      }
+    </script>
+  </body>
+</html>
+
