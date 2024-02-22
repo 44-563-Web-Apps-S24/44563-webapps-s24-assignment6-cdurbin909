@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <title>Packing</title>
+
+  <body>
+    <h2>Chase packs for a trip</h2>
+
+    <form>
+      <label for="light">Pack light</label>
+      <input type="checkbox" id="light" name="light" value="True" /><br />
+
+      <label for="carryOn">Carry on</label>
+      <input type="checkbox" id="carryOn" name="carryOn" value="True" />
+      <br />
+
+      <label for="tablet">Tablet</label>
+      <input type="checkbox" id="tablet" name="tablet" value="False" />
+      <br />
+
+      <input type="button" onclick="selectPack()" value="Select for packing" />
+    </form>
+
+    <p id="result">This text will be replaced</p>
+
+    <script>
+      function selectPack() {
+        my_pack = [];
+
+        console.log("Getting form values");
+
+        light = document.getElementById("light").value;
+        carryOn = document.getElementById("carryOn").value;
+        tablet = document.getElementById("tablet").value;
+
+        out = document.getElementById("result");
+        if (light == "True") {
+          my_pack.light = "True";
+        } else {
+          my_pack.light = "False";
+        }
+        if (carryOn == "True") {
+          my_pack.carryOn = "True";
+        } else {
+          my_pack.carryOn = "False";
+        }
+        if (tablet == "True") {
+          my_pack.tablet = "True";
+        } else {
+          my_pack.tablet = "False";
+        }
+        out.innerHTML =
+          "Pack Light: " +
+          my_pack.light +
+          "</br>Carry On: " +
+          my_pack.carryOn +
+          "</br>Tablet: " +
+          tablet;
+      }
+    </script>
+  </body>
+</html>
+
