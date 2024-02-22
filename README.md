@@ -2,3 +2,6 @@
 # WebApps-S24-Assignment-6
 Introduction to Java Script and DOM
 
+hosted at [this link](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-cdurbin909/animal.html)
+hosted at [this link](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-cdurbin909/discount.html)
+hosted at [this link](https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-cdurbin909/packing.html)
