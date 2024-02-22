@@ -20,12 +20,22 @@
       <input type="button" onclick="selectPack()" value="Select for packing" />
     </form>
 
-    <p id="result">This text will be replaced</p>
+    <form>
+      <label for="month">Enter travel month</label>
+      <input type="text" id="month" name="month" value="May" /><br />
+
+      <label for="price">Enter price</label>
+      <input type="text" id="price" name="price" />
+      <br />
+
+      <input type="button" onclick="updatePack()" value="Update the pack" />
+    </form>
+
+    <p id="result"></p>
 
     <script>
+      my_pack = [];
       function selectPack() {
-        my_pack = [];
-
         console.log("Getting form values");
 
         light = document.getElementById("light").value;
@@ -48,7 +58,7 @@
         } else {
           my_pack.tablet = "False";
         }
-        out.innerHTML =
+        out.innerHTML +=
           "Pack Light: " +
           my_pack.light +
           "</br>Carry On: " +
@@ -56,7 +66,18 @@
           "</br>Tablet: " +
           tablet;
       }
+
+      function updatePack() {
+        console.log("Getting form values");
+        month = document.getElementById("month").value;
+        price = document.getElementById("price").value;
+
+        my_pack.month = month;
+        my_pack.price = price;
+
+        out.innerHTML +=
+          "</br>Month: " + my_pack.month + "</br>Price: " + my_pack.price;
+      }
     </script>
   </body>
 </html>
-
